@@ -1,0 +1,94 @@
+/* ── Aether Theme System ──────────────────────────────────────── */
+/* All theme colors are controlled via CSS custom properties.       */
+/* JavaScript updates these on the :root element dynamically.       */
+
+/* ── Default Theme (Dark / Night / Clear) ───────────────────── */
+:root {
+  /* Backgrounds */
+  --theme-bg-primary:    #020713;
+  --theme-bg-secondary:  #071224;
+  --theme-bg-tertiary:   #10243d;
+
+  /* Panels */
+  --theme-panel:         rgba(16, 36, 61, 0.72);
+  --theme-panel-strong:  rgba(16, 36, 61, 0.92);
+
+  /* Text */
+  --theme-text-primary:  #f4f8fc;
+  --theme-text-secondary: #b2c7db;
+  --theme-text-muted:    #7891aa;
+
+  /* Borders */
+  --theme-border:        rgba(255, 255, 255, 0.10);
+  --theme-border-strong: rgba(255, 255, 255, 0.18);
+
+  /* Accents */
+  --theme-accent:        #63b3ea;
+  --theme-accent-warm:   #f0b35f;
+  --theme-accent-cold:   #b8e2ff;
+
+  /* Semantic */
+  --theme-warning:       #ffca4d;
+  --theme-danger:        #ff6b5f;
+
+  /* Effects */
+  --theme-glow:          rgba(99, 179, 234, 0.28);
+  --theme-glow-warm:     rgba(240, 179, 95, 0.24);
+  --theme-shadow:        rgba(0, 0, 0, 0.62);
+
+  /* Atmospheric gradient stops */
+  --theme-sky-top:       #01040a;
+  --theme-sky-mid:       #020713;
+  --theme-sky-bottom:    #071224;
+
+  /* Overlay tint for particles/effects */
+  --theme-overlay:       rgba(2, 7, 19, 0.52);
+}
+
+/* ── Light Theme ─────────────────────────────────────────────── */
+[data-theme="light"] {
+  --theme-bg-primary:    #f7fbff;
+  --theme-bg-secondary:  #e4eff9;
+  --theme-bg-tertiary:   #d1e1f0;
+
+  --theme-panel:         rgba(255, 255, 255, 0.72);
+  --theme-panel-strong:  rgba(255, 255, 255, 0.92);
+
+  --theme-text-primary:  #1d3965;
+  --theme-text-secondary: #4679af;
+  --theme-text-muted:    #587089;
+
+  --theme-border:        rgba(8, 17, 31, 0.10);
+  --theme-border-strong: rgba(8, 17, 31, 0.18);
+
+  --theme-accent:        #0f6ea8;
+  --theme-accent-warm:   #b96d12;
+  --theme-accent-cold:   #147eae;
+
+  --theme-warning:       #9a6d00;
+  --theme-danger:        #b52d22;
+
+  --theme-glow:          rgba(15, 110, 168, 0.20);
+  --theme-glow-warm:     rgba(185, 109, 18, 0.18);
+  --theme-shadow:        rgba(0, 0, 0, 0.14);
+
+  --theme-sky-top:       #cfe3f6;
+  --theme-sky-mid:       #e1eef9;
+  --theme-sky-bottom:    #f0f7fe;
+
+  --theme-overlay:       rgba(209, 225, 240, 0.42);
+}
+
+/* ── Transition for theme switching ─────────────────────────── */
+body,
+.glass,
+.glass-strong,
+[class*="panel"],
+[class*="sidebar"],
+[class*="nav"] {
+  transition:
+    background-color 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color     600ms cubic-bezier(0.4, 0, 0.2, 1),
+    color            400ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow       600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
