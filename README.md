@@ -1,4 +1,4 @@
-# 🌌 Aether — Atmospheric Intelligence Interface
+# 🌌 Aether: Atmospheric Intelligence Interface
 
 <p align="center">
   <a href="https://biowess.github.io/aether">
